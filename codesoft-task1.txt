@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R. Lahari Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#6c63ff,transparent);
+top:-200px;
+left:-200px;
+filter:blur(150px);
+z-index:-1;
+}
+section{
+padding:100px 10%;
+}
+h2{
+    font-size:38px;
+    margin-bottom:25px;
+    text-align:center;
+    color:#ffffff;
+}
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero h1{
+    font-size:70px;
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.hero h3{
+    margin-top:15px;
+    color:#6c63ff;
+    font-size:28px;
+}
+.hero p{
+    margin-top:20px;
+    color:#aaa;
+    max-width:700px;
+    line-height:1.8;
+}
+.btn{
+    margin-top:30px;
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+}
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #6c63ff;
+}
+.glass{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+width:"200"
+}
+.glass:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(108,99,255,0.4);
+}
+.about-text{
+    text-align:center;
+    line-height:2;
+    color:#ddd;
+    font-size:17px;
+}
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.skill{
+    padding:14px 25px;
+    border-radius:30px;
+    background:#111;
+    transition:0.4s;
+}
+.skill:hover{
+    background:#6c63ff;
+    transform:scale(1.1);
+    box-shadow:0 0 15px #6c63ff;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+.card-title{
+    font-size:22px;
+    margin-bottom:12px;
+    color:#fff;
+}
+.small{
+    color:#aaa;
+    margin-bottom:10px;
+    line-height:1.7;
+}
+.resume-section{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin:30px;
+    padding:30px;
+}
+.resume-section h1{
+    font-size:40px;
+    margin-bottom:15px;
+    color:white;
+
+}
+.resume-section p{
+    font-size:17px;
+    margin-bottom:30px;
+    color:#aaa;
+}
+.resume-btn{
+    display:inline-block;
+    padding:18px 45px;
+    border-radius:15px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:300;
+    box-shadow:0 0 25px rgba(37,99,235,0.6);
+    transition:0.3s ease;
+}
+.resume-btn:hover{
+    transform:scale(1.05);
+}
+a{
+    color:#00d4ff;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+.contact{
+    text-align:center;
+}
+.contact p{
+    margin:15px 0;
+    color:#ccc;
+    font-size:18px;
+}
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    color:#888;
+}
+@media(max-width:768px){
+    .hero h1{
+        font-size:50px;
+    }
+    .hero h3{
+        font-size:22px;
+    }
+    h2{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+<body>
+<section class="hero">
+    <h1>R. Lahari 👋</h1>
+    <h3>Web Development Intern</h3>
+    <p>
+        Aspiring Web Developer passionate about building modern,
+        responsive and user-friendly websites using HTML and CSS.
+    </p>
+    <a href="#projects">
+        <button class="btn">View Projects</button>
+    </a>
+</section>
+<section>
+    <h2>About Me</h2>
+    <div class="glass about-text">
+<img src="C:\Users\Ravil\OneDrive\Pictures\Desktop\Photos\WhatsApp Image 2026-02-25 at 6.56.49 PM (1).jpeg" width="200" height="200">
+<p>
+Hello! I'm R. Lahari, a passionate and motivated student with a strong interest in technology, programming, and web development. I enjoy learning new skills and building creative projects that improve my problem-solving abilities and technical knowledge.
+I have experience working with HTML, CSS, Python. I am continuously exploring modern technologies to grow as a developer. I like creating responsive websites, solving coding problems, and participating in technical learning activities.
+I am a quick learner,always eager to take on new challenges that help me improve both personally and professionally. My goal is to build innovative projects and develop a successful career in the field of technology.
+</p>
+<p>
+And this are my current education details:
+</p>
+<p>
+🎓B.Tech-Artificial Intelligence & Data Science.
+</p>
+<p>
+🏫College-Annamacharya Institute of Technology and Sciences.
+</p>
+<p>
+📑Current CGPA: 8.5.
+</p>
+<p>
+💡Interested in Web Development & AI-based solutions.
+</p>
+<p>
+🎯Become a Full Stack Web Developer.
+</p>
+    </div>
+</section>
+<section>
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill"> Basics of Python</div>
+    </div>
+</section>
+<section id="projects">
+    <h2>Mini Projects</h2>
+        <!-- Project 1-->
+        <div class="glass">
+            <div class="card-title">
+                Skill Graph AI
+            </div>
+            <p class="small">
+                Real-Time Skill Analysis Website
+            </p>
+            <p class="small">
+                Tech: HTML, CSS, JavaScript
+            </p>
+            <a href="https://resume33-kappa.vercel.app" target="_blank">
+                Live Demo
+            </a>
+        </div>
+<div class="glass">
+            <div class="card-title">
+                Mental Health Tracker
+            </div>
+            <p class="small">
+                Tracks Mental Health Condition
+            </p>
+            <p class="small">
+                Tech: HTML, CSS, JavaScript
+            </p>
+            <a href="https://mentalhealth-a6bkfb2jh-rlahari110607-codes-projects.vercel.app" target="_blank">
+                Live Demo
+            </a>
+        </div>
+    </div>
+</section>
+<section class="resume-section">
+    <h1>Resume</h1>
+<div class="glass">
+    <p>You can download my resume by clicking the button below.</p>
+    <a href="https://drive.google.com/uc?export=download&id=1pEHVjIrSL3WgNiziovXq3G-pAWaOKNH6" class="resume-btn">
+        Download Resume
+    </a>
+</section>
+</div>
+<section class="contact">
+    <h2>Contact Me</h2>
+    <div class="glass">
+        <p>
+            Email: r.lahari110607@gmail.com
+        </p>
+        <p>
+           Phone: +91 7981729662
+        </p>
+        <p>
+             GitHub:
+            <a href="https://github.com/" target="_blank">
+                Visit Profile
+            </a>
+        </p>
+<p>
+Linkedin:
+<a href="https://www.linkedin.com/in/r-lahari-ab0b303a1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+Visit Profile
+</a>
+</p>
+<p>
+GSSOC Profile:
+<a href="https://gssoc.girlscript.org/profile/7ca586de-f473-4fff-add6-3f7af0dfdf5f" target="_blank">
+Visit Profile
+</a>
+</p>
+        <button class="btn">
+            Hire Me
+        </button>
+    </div>
+</section>
+<footer>
+    © 2026 R. Lahari | All Rights Reserved
+</footer>
+</body>
+</html>

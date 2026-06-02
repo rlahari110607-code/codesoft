@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creative Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#6c63ff,transparent);
+    top:-200px;
+    left:-200px;
+    filter:blur(150px);
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00d4ff;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+}
+
+.hero-content h1{
+    font-size:70px;
+    line-height:1.2;
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:18px;
+    color:#bbb;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+    color:white;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #6c63ff;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+/* GLASS CARD */
+
+.glass{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+}
+
+.glass:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(108,99,255,0.5);
+}
+
+/* FEATURES */
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature h3{
+    margin-bottom:15px;
+    color:#00d4ff;
+}
+
+.feature p{
+    color:#bbb;
+    line-height:1.7;
+}
+
+/* ABOUT */
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    color:#bbb;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#00d4ff;
+}
+
+.service-card p{
+    color:#bbb;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    color:#bbb;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    color:#888;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Lahari
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Build Modern <br>
+            Landing Pages
+        </h1>
+
+        <p>
+            Create beautiful, responsive and attractive websites
+            using HTML and CSS with modern UI design.
+        </p>
+
+        <a href="#features" class="btn">
+            Get Started
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FEATURES SECTION -->
+
+<section id="features">
+
+    <h2 class="section-title">
+        Features
+    </h2>
+
+    <div class="features-grid">
+
+        <div class="glass feature">
+
+            <h3>
+                Responsive Design
+            </h3>
+
+            <p>
+                Fully responsive layout that works perfectly
+                on desktop, tablet and mobile devices.
+            </p>
+
+        </div>
+
+        <div class="glass feature">
+
+            <h3>
+                Modern UI
+            </h3>
+
+            <p>
+                Stylish glassmorphism effects with smooth
+                hover animations and glowing backgrounds.
+            </p>
+
+        </div>
+
+        <div class="glass feature">
+
+            <h3>
+                Fast Performance
+            </h3>
+
+            <p>
+                Optimized clean code for faster loading
+                and better user experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+    <h2 class="section-title">
+        About Us
+    </h2>
+
+    <div class="glass">
+
+        <p>
+            We design creative and modern websites with
+            responsive layouts and attractive user interfaces.
+            Our goal is to provide high-quality web experiences
+            using HTML and CSS.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SERVICES SECTION -->
+
+<section id="services">
+
+    <h2 class="section-title">
+        Our Services
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="glass service-card">
+
+            <h3>
+                Web Design
+            </h3>
+
+            <p>
+                Professional website designs with modern layouts
+                and beautiful color combinations.
+            </p>
+
+        </div>
+
+        <div class="glass service-card">
+
+            <h3>
+                UI Development
+            </h3>
+
+            <p>
+                Responsive and user-friendly interfaces using
+                HTML and CSS technologies.
+            </p>
+
+        </div>
+
+        <div class="glass service-card">
+
+            <h3>
+                Landing Pages
+            </h3>
+
+            <p>
+                High-converting landing pages with smooth
+                sections and attractive designs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact Us
+    </h2>
+
+    <div class="glass">
+
+        <p>
+            📧 Email: contact@example.com
+        </p>
+
+        <p>
+            📱 Phone: +91 9876543210
+        </p>
+
+        <p>
+            📍 India
+        </p>
+
+        <a href="#" class="btn">
+            Contact Now
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Creative Landing Page | All Rights Reserved
+
+</footer>
+
+</body>
+</html>

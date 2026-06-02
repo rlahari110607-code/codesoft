@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animated Professional Calculator</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    overflow:hidden;
+    position:relative;
+}
+
+/* FLOATING SYMBOLS */
+
+.symbol{
+    position:absolute;
+    color:rgba(255,255,255,0.08);
+    font-size:40px;
+    font-weight:bold;
+    animation:float 15s linear infinite;
+    user-select:none;
+}
+
+/* DIFFERENT POSITIONS */
+
+.symbol:nth-child(1){
+    top:10%;
+    left:5%;
+    font-size:60px;
+    animation-duration:20s;
+}
+
+.symbol:nth-child(2){
+    top:20%;
+    left:80%;
+    font-size:50px;
+    animation-duration:18s;
+}
+
+.symbol:nth-child(3){
+    top:70%;
+    left:15%;
+    font-size:70px;
+    animation-duration:22s;
+}
+
+.symbol:nth-child(4){
+    top:80%;
+    left:75%;
+    font-size:55px;
+    animation-duration:16s;
+}
+
+.symbol:nth-child(5){
+    top:40%;
+    left:50%;
+    font-size:80px;
+    animation-duration:25s;
+}
+
+.symbol:nth-child(6){
+    top:60%;
+    left:90%;
+    font-size:45px;
+    animation-duration:19s;
+}
+
+.symbol:nth-child(7){
+    top:30%;
+    left:25%;
+    font-size:65px;
+    animation-duration:17s;
+}
+
+.symbol:nth-child(8){
+    top:85%;
+    left:45%;
+    font-size:50px;
+    animation-duration:21s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-40px) rotate(180deg);
+    }
+
+    100%{
+        transform:translateY(0px) rotate(360deg);
+    }
+
+}
+
+/* GLOW EFFECT */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#06b6d4;
+    border-radius:50%;
+    top:-150px;
+    left:-150px;
+    filter:blur(140px);
+    opacity:0.3;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#9333ea;
+    border-radius:50%;
+    bottom:-150px;
+    right:-150px;
+    filter:blur(140px);
+    opacity:0.3;
+}
+
+/* CALCULATOR */
+
+.calculator{
+    width:370px;
+    padding:28px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 1px rgba(255,255,255,0.1);
+    z-index:10;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    font-size:25px;
+    font-weight:600;
+}
+
+/* DISPLAY */
+
+.display{
+    width:100%;
+    height:85px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    background:#0f172a;
+    color:white;
+    text-align:right;
+    padding:20px;
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+/* BUTTON GRID */
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+/* BUTTONS */
+
+button{
+    height:68px;
+    border:none;
+    border-radius:18px;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s ease;
+    color:white;
+    background:#1e293b;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+
+/* NUMBER BUTTONS */
+
+.number:hover{
+    background:#334155;
+}
+
+/* OPERATOR */
+
+.operator{
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+}
+
+.operator:hover{
+    box-shadow:0 0 18px #9333ea;
+}
+
+/* CLEAR */
+
+.clear{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+
+}
+
+.clear:hover{
+    box-shadow:0 0 18px #ef4444;
+}
+
+/* DELETE */
+
+.delete{
+    background:linear-gradient(90deg,#6c63ff,#00d4ff);
+}
+
+.delete:hover{
+    box-shadow:0 0 18px #f59e0b;
+}
+
+/* EQUAL */
+
+.equal{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+    grid-column:span 2;
+}
+
+.equal:hover{
+    box-shadow:0 0 20px #06b6d4;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:450px){
+
+    .calculator{
+        width:92%;
+    }
+
+    button{
+        height:60px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING SYMBOLS -->
+
+<div class="symbol">+</div>
+<div class="symbol">−</div>
+<div class="symbol">×</div>
+<div class="symbol">÷</div>
+<div class="symbol">%</div>
+<div class="symbol">=</div>
+<div class="symbol">√</div>
+<div class="symbol">π</div>
+
+<!-- CALCULATOR -->
+
+<div class="calculator">
+
+    <div class="title">
+        Smart Calculator
+    </div>
+
+    <!-- DISPLAY -->
+
+    <input type="text" id="display" class="display" readonly>
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+        <button class="clear" onclick="clearDisplay()">C</button>
+
+        <button class="delete" onclick="deleteLast()">⌫</button>
+
+        <button class="operator" onclick="appendValue('%')">%</button>
+
+        <button class="operator" onclick="appendValue('/')">÷</button>
+
+        <button class="number" onclick="appendValue('7')">7</button>
+
+        <button class="number" onclick="appendValue('8')">8</button>
+
+        <button class="number" onclick="appendValue('9')">9</button>
+
+        <button class="operator" onclick="appendValue('*')">×</button>
+
+        <button class="number" onclick="appendValue('4')">4</button>
+
+        <button class="number" onclick="appendValue('5')">5</button>
+
+        <button class="number" onclick="appendValue('6')">6</button>
+
+        <button class="operator" onclick="appendValue('-')">−</button>
+
+        <button class="number" onclick="appendValue('1')">1</button>
+
+        <button class="number" onclick="appendValue('2')">2</button>
+
+        <button class="number" onclick="appendValue('3')">3</button>
+
+        <button class="operator" onclick="appendValue('+')">+</button>
+
+        <button class="number" onclick="appendValue('0')">0</button>
+
+        <button class="number" onclick="appendValue('.')">.</button>
+
+        <button class="equal" onclick="calculate()">=</button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* DISPLAY */
+
+let display = document.getElementById("display");
+
+/* APPEND VALUE */
+
+function appendValue(value){
+    display.value += value;
+}
+
+/* CLEAR */
+
+function clearDisplay(){
+    display.value = "";
+}
+
+/* DELETE */
+
+function deleteLast(){
+    display.value = display.value.slice(0,-1);
+}
+
+/* CALCULATE */
+
+function calculate(){
+
+    try{
+        display.value = eval(display.value);
+    }
+
+    catch{
+        display.value = "Error";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
